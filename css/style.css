@@ -1,0 +1,125 @@
+/* * {
+    outline: 1px solid tomato;
+} */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 999;
+
+    line-height: 80px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.header .header_wrap {
+    display: flex;
+    padding: 0 80px;
+}
+
+.header .header_wrap .gnb {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.header .header_wrap .gnb>ul {
+    display: flex;
+    gap: 60px;
+}
+
+.header .header_wrap .util {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 0 auto;
+}
+
+.header .header_wrap .util>ul {
+    display: flex;
+    gap: 15px;
+}
+
+.header .util>ul>li a {
+    font-size: 14px;
+}
+
+.header .util i {
+    font-size: 24px;
+    vertical-align: -5px;
+}
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .visual_slide .itm {
+    position: relative;
+    height: 100vh;
+}
+
+.main_visual .visual_slide .itm01 {
+    background: url(../images/main_slide01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .visual_slide .itm02 {
+    background: url(../images/main_slide02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .visual_slide .itm03 {
+    background: url(../images/main_slide03.jpg) no-repeat center center/cover;
+}
+
+.main_visual .visual_slide .itm04 {
+    background: url(../images/main_slide04.jpg) no-repeat center center/cover;
+}
+
+.main_visual .visual_slide .itm .text_box {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    color: #fff;
+
+}
+
+.main_visual .visual_slide .text_box strong {
+    display: inline-block;
+    margin: 0 0 16px 0;
+    text-indent: 0.3em;
+}
+
+.main_visual .visual_slide .text_box p {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+}
+
+.main_visual .slide_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: rgba(12, 76, 163, 0.7);
+    line-height: 80px;
+}
+
+.main_visual .slide_box .slide_content {
+    display: flex;
+    color: #fff;
+}
+
+.main_visual .slide_box .slide_text {
+    margin: 0 auto 0 0;
+}
+
+.main_visual .slide_box .slide_text>li {
+    display: none;
+}
+
+.main_visual .slide_box .slide_text>li.on {
+    display: block;
+}
