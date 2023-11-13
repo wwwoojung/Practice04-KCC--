@@ -123,3 +123,42 @@
 .main_visual .slide_box .slide_text>li.on {
     display: block;
 }
+
+.main_visual .slide_box .arrows {
+    position: relative;
+    margin: 0 32px;
+}
+
+.main_visual .slide_box .arrows i {
+    margin: 0 32px;
+}
+
+.main_visual .slide_box .control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+
+    width: 41px;
+    height: 41px;
+}
+
+.main_visual .slide_box .control circle {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 1px;
+
+
+    stroke-dasharray: 630;
+    animation: play 10s;
+}
+
+@keyframes play {
+    from {
+        stroke-dashoffset: 630;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
