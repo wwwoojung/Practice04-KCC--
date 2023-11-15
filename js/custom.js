@@ -1,4 +1,14 @@
 $(function () {
+    $(window).on('scroll', function () {
+        const sct = $(window).scrollTop()
+
+        if (sct > 0) {
+            $('.header').addClass('on');
+        } else {
+            $('.header').removeClass('on');
+        };
+    })
+
     $('.main_visual .visual_slide').slick({
         arrows: false,
         autoplay: true,
@@ -43,5 +53,9 @@ $(function () {
         }
 
         st = !st;
+    })
+
+    $('.main_notice .news_content a').on('click', function (e) {
+        e.preventDefault()
     })
 })
