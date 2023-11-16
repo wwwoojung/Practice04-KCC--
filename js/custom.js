@@ -13,7 +13,7 @@ $(function () {
         arrows: false,
         autoplay: true,
         pauseOnHover: false,
-        autoplayspeed: 3000
+        autoplaySpeed: 4000,
     });
 
     $('.main_visual .visual_slide').on('init afterChange e', function (e, s, c) {
@@ -26,7 +26,7 @@ $(function () {
         $('.main_visual .slide_box .slide_text li').eq(c).addClass('on')
             .siblings().removeClass('on');
 
-        $('.circle').addClass('on')
+        $('.circle').addClass('on');
     });
 
     $('.main_visual .visual_slide').on('beforeChange', function () {
@@ -57,5 +57,46 @@ $(function () {
 
     $('.main_notice .news_content a').on('click', function (e) {
         e.preventDefault()
+    })
+
+    $('#promotion').YTPlayer({
+        videoURL: 'https://youtu.be/-PiJlB3JJ9Y',
+        containment: '.main_TV .movie_case',
+        showControls: false,
+        optimizeDisplay: false,
+        playOnlyIfVisible: true,
+        autoPlay: false,
+    });
+
+
+
+    let movie = true;
+
+
+    $('.movie_play').on('click', function () {
+        if (movie) {
+            $('#promotion').YTPPlay();
+        }
+        else {
+            $('#promotion').YTPPause();
+        }
+
+        $(this).toggleClass('on');
+
+        movie = !movie;
+    })
+
+    $(window).on('scroll', function () {
+        const sct = $(this).scrollTop();
+
+        if (sct > 200) {
+            $('.totop').addClass('on')
+        } else {
+            $('.totop').removeClass('on')
+        }
+    })
+
+    $('.totop').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 500);
     })
 })
